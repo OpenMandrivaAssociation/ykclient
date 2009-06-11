@@ -23,7 +23,7 @@ online server.
 %package -n	%{libname}
 Summary:	Implements online validation of Yubikey OTPs
 Group:          System/Libraries
-Obsoletes:	%{mklibname yubikey-client 0}
+Obsoletes:	%{mklibname libyubikey-client 0}
 
 %description -n	%{libname}
 This is a library written in C to validate a Yubikey OTP against the Yubico
@@ -34,7 +34,7 @@ Summary:	Static library and header files for the libykclientt library
 Group:		Development/C
 Provides:	%{name}-devel = %{version}
 Requires:	%{libname} = %{version}
-Obsoletes:	%{mklibname yubikey-client 0 -d}
+Obsoletes:	%{mklibname libyubikey-client 0 -d}
 
 %description -n	%{develname}
 This is a library written in C to validate a Yubikey OTP against the Yubico
