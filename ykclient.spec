@@ -5,7 +5,7 @@
 Summary:	Implements online validation of Yubikey OTPs
 Name:		ykclient
 Version:	2.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/Libraries
 License:	BSD
 URL:		http://code.google.com/p/yubico-c-client/
@@ -34,7 +34,7 @@ Summary:	Static library and header files for the libykclientt library
 Group:		Development/C
 Provides:	%{name}-devel = %{version}
 Requires:	%{libname} = %{version}
-Obsoletes:	%{mklibname libyubikey-client 0 -d}
+Obsoletes:	%{mklibname libyubikey-client -d}
 
 %description -n	%{develname}
 This is a library written in C to validate a Yubikey OTP against the Yubico
