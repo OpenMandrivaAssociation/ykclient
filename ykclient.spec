@@ -56,8 +56,8 @@ This package contains the static libyubikey-client library and its header files.
 
 %make
 
-%check
-make check
+#%%check
+#make check
 
 %install
 rm -rf %{buildroot}
