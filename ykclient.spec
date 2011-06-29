@@ -4,14 +4,13 @@
 
 Summary:	Implements online validation of Yubikey OTPs
 Name:		ykclient
-Version:	2.4
-Release:	%mkrel 3
+Version:	2.6
+Release:	%mkrel 1
 Group:		System/Libraries
 License:	BSD
 URL:		http://code.google.com/p/yubico-c-client/
 Source0:	http://yubico-c-client.googlecode.com/files/%{name}-%{version}.tar.gz
 Source1:	http://yubico-c-client.googlecode.com/files/%{name}-%{version}.tar.gz.sig
-Patch0:		ykclient-2.4-fix_check_bork.diff
 BuildRequires:	autoconf
 BuildRequires:	chrpath
 BuildRequires:	curl-devel
@@ -47,7 +46,6 @@ This package contains the static libyubikey-client library and its header files.
 %prep
 
 %setup -q -n %{name}-%{version}
-%patch0 -p0
 
 %build
 
@@ -56,8 +54,8 @@ This package contains the static libyubikey-client library and its header files.
 
 %make
 
-#%%check
-#make check
+%check
+make check
 
 %install
 rm -rf %{buildroot}
@@ -92,5 +90,3 @@ rm -rf %{buildroot}
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/*.*a
-
-
