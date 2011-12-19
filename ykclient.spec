@@ -4,18 +4,16 @@
 
 Summary:	Implements online validation of Yubikey OTPs
 Name:		ykclient
-Version:	2.6
-Release:	%mkrel 1
+Version:	2.7
+Release:	1
 Group:		System/Libraries
 License:	BSD
 URL:		http://code.google.com/p/yubico-c-client/
 Source0:	http://yubico-c-client.googlecode.com/files/%{name}-%{version}.tar.gz
 Source1:	http://yubico-c-client.googlecode.com/files/%{name}-%{version}.tar.gz.sig
-BuildRequires:	autoconf
+BuildRequires:	autoconf automake libtool
 BuildRequires:	chrpath
 BuildRequires:	curl-devel
-BuildRequires:	libtool
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This is a library written in C to validate a Yubikey OTP against the Yubico
@@ -34,7 +32,7 @@ online server.
 Summary:	Static library and header files for the libykclientt library
 Group:		Development/C
 Provides:	%{name}-devel = %{version}
-Requires:	%{libname} = %{version}
+Requires:	%{libname} >= %{version}
 Obsoletes:	%{mklibname libyubikey-client -d}
 
 %description -n	%{develname}
@@ -65,28 +63,16 @@ rm -rf %{buildroot}
 # nuke rpath
 chrpath -d %{buildroot}%{_bindir}/ykclient
 
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
-%clean
-rm -rf %{buildroot}
+# cleanup
+rm -f %{buildroot}%{_libdir}/*.*a
 
 %files
-%defattr(-,root,root)
 %{_bindir}/ykclient
 
 %files -n %{libname}
-%defattr(-,root,root)
 %doc AUTHORS ChangeLog NEWS README
 %{_libdir}/*.so.%{major}*
 
 %files -n %{develname}
-%defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/*.so
-%{_libdir}/*.*a
