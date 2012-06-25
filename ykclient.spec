@@ -4,7 +4,7 @@
 
 Summary:	Implements online validation of Yubikey OTPs
 Name:		ykclient
-Version:	2.7
+Version:	2.8
 Release:	1
 Group:		System/Libraries
 License:	BSD
@@ -16,7 +16,8 @@ BuildRequires:	chrpath
 BuildRequires:	curl-devel
 
 %description
-This is a library written in C to validate a Yubikey OTP against the Yubico
+This is a library written in C
+to validate a Yubikey OTP against the Yubico
 online server.
 
 %package -n	%{libname}
@@ -25,7 +26,8 @@ Group:          System/Libraries
 Obsoletes:	%{mklibname libyubikey-client 0}
 
 %description -n	%{libname}
-This is a library written in C to validate a Yubikey OTP against the Yubico
+This is a library written in C
+to validate a Yubikey OTP against the Yubico
 online server.
 
 %package -n	%{develname}
@@ -36,10 +38,12 @@ Requires:	%{libname} >= %{version}
 Obsoletes:	%{mklibname libyubikey-client -d}
 
 %description -n	%{develname}
-This is a library written in C to validate a Yubikey OTP against the Yubico
+This is a library written in C to
+validate a Yubikey OTP against the Yubico
 online server.
 
-This package contains the static libyubikey-client library and its header files.
+This package contains the static
+libyubikey-client library and its header files.
 
 %prep
 
