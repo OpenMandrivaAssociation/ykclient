@@ -41,7 +41,8 @@ Obsoletes:	%{mklibname libyubikey-client -d}
 This is a library written in C to validate a Yubikey OTP against the Yubico
 online server.
 
-This package contains the static libyubikey-client library and its header files.
+This package contains the static libyubikey-client library and its header
+files.
 
 %prep
 
