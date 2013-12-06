@@ -5,7 +5,7 @@
 Summary:	Implements online validation of Yubikey OTPs
 Name:		ykclient
 Version:	2.7
-Release:	2
+Release:	3
 Group:		System/Libraries
 License:	BSD
 URL:		http://code.google.com/p/yubico-c-client/
