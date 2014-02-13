@@ -14,6 +14,7 @@ Source1:	http://opensource.yubico.com/yubico-c-client/releases/ykclient-%{versio
 BuildRequires:	autoconf automake libtool
 BuildRequires:	chrpath
 BuildRequires:	curl-devel
+BuildRequires:	help2man
 
 %description
 This is a library written in C to validate a Yubikey OTP against
