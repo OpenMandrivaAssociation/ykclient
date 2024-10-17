@@ -8,7 +8,7 @@ Version:	2.15
 Release:	3
 Group:		System/Libraries
 License:	BSD
-URL:		http://opensource.yubico.com/yubico-c-client/releases.html
+URL:		https://opensource.yubico.com/yubico-c-client/releases.html
 Source0:	http://opensource.yubico.com/yubico-c-client/releases/ykclient-%{version}.tar.gz
 Source1:	http://opensource.yubico.com/yubico-c-client/releases/ykclient-%{version}.tar.gz.sig
 BuildRequires:	autoconf automake libtool
