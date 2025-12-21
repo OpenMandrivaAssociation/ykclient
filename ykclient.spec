@@ -11,6 +11,8 @@ License:	BSD
 URL:		https://opensource.yubico.com/yubico-c-client/releases.html
 Source0:	http://opensource.yubico.com/yubico-c-client/releases/ykclient-%{version}.tar.gz
 Source1:	http://opensource.yubico.com/yubico-c-client/releases/ykclient-%{version}.tar.gz.sig
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	autoconf automake libtool
 BuildRequires:	chrpath
 BuildRequires:	curl-devel
